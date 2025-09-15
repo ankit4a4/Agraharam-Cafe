@@ -10,6 +10,9 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
+// dfsdsdsdsd
+
+
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
