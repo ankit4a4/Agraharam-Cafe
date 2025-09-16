@@ -16,13 +16,18 @@ export default function Navigation() {
     { href: '/contact', label: 'Contact' },
   ];
 
-  // Scroll lock jab menu open ho
+  // Disable scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = '';
     }
+
+    // Cleanup when component unmounts
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [isOpen]);
 
   return (
@@ -40,10 +45,11 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`font-medium transition-colors duration-200 ${pathname === item.href
-                  ? 'text-[#2f6b35] border-b-2 border-[#2f6b35]'
-                  : 'text-gray-800 hover:text-[#2f6b35]'
-                  }`}
+                className={`font-medium transition-colors duration-200 ${
+                  pathname === item.href
+                    ? 'text-[#2f6b35] border-b-2 border-[#2f6b35]'
+                    : 'text-gray-800 hover:text-[#2f6b35]'
+                }`}
               >
                 {item.label}
               </Link>
@@ -70,31 +76,20 @@ export default function Navigation() {
             </button>
           </div>
         </div>
-      </div>
 
-      {/* Mobile Navigation (Slide In with Overlay) */}
-      {isOpen && (
-        <div className="fixed inset-0 z-40 md:hidden">
-          {/* Overlay */}
-          <div
-            className="absolute inset-0 bg-black/50"
-            onClick={() => setIsOpen(false)}
-          />
-
-          {/* Sidebar Menu */}
-          <div
-            className={`absolute top-0 right-0 h-full w-2/3 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isOpen ? "translate-x-0" : "translate-x-full"
-              }`}
-          >
-            <div className="flex flex-col p-6 space-y-4">
+        {/* Mobile Dropdown Navigation */}
+        {isOpen && (
+          <div className="md:hidden">
+            <div className="px-4 pt-2 pb-3 space-y-2 bg-white border-t border-gray-200 shadow">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`block text-lg font-medium transition-colors duration-200 ${pathname === item.href
-                      ? "text-[#2f6b35]"
-                      : "text-gray-800 hover:text-[#2f6b35]"
-                    }`}
+                  className={`block px-3 py-2 rounded-md font-medium transition-colors duration-200 ${
+                    pathname === item.href
+                      ? 'text-[#2f6b35] bg-[#2f6b35]/10'
+                      : 'text-gray-800 hover:text-[#2f6b35]'
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
@@ -104,16 +99,15 @@ export default function Navigation() {
               {/* CTA Button */}
               <Link
                 href="/contact"
-                className="mt-4 px-4 py-2 bg-[#2f6b35] text-white rounded-lg shadow hover:bg-[#26562b] transition"
+                className="block px-3 py-2 bg-[#2f6b35] text-white text-center rounded-md shadow hover:bg-[#26562b] transition"
                 onClick={() => setIsOpen(false)}
               >
                 Get in Touch
               </Link>
             </div>
           </div>
-        </div>
-      )}
-
+        )}
+      </div>
     </nav>
   );
 }
