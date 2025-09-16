@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import img from "../../public/homepageImages/heroSlider.jpg"
 
 const HeroHome = () => {
     // Background Slideshow
     const images = [
-        "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&fit=crop",
+        img.src,
         "https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg?auto=compress&cs=tinysrgb&w=1920&h=1280&fit=crop",
         "https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&fit=crop",
     ];
@@ -21,7 +22,7 @@ const HeroHome = () => {
     }, [images.length]);
 
     return (
-        <section className="relative min-h-screen py-10 flex items-center justify-center overflow-hidden">
+        <section className="relative  md:py-32 py-20  flex items-center justify-center overflow-hidden">
             {/* Background Slideshow */}
             {images.map((img, index) => (
                 <div
@@ -45,7 +46,7 @@ const HeroHome = () => {
             <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 mt-10">
                 {/* Tagline */}
                 <div className="mb-6 animate-fade-in">
-                    <span className="text-[#c9a66b] font-semibold tracking-widest text-xs sm:text-sm md:text-base uppercase border-2 border-[#c9a66b] px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-black/30 backdrop-blur-md shadow-lg">
+                    <span className="text-[#c9a66b] font-semibold tracking-widest text-[10px] sm:text-sm md:text-base uppercase border-2 border-[#c9a66b] px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-black/30 backdrop-blur-md shadow-lg">
                         Since 2008 • Authentic South Indian Cuisine
                     </span>
                 </div>

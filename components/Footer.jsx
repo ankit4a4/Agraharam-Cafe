@@ -1,25 +1,40 @@
 import { FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { FiMapPin } from 'react-icons/fi';
 import { GiCoffeeCup } from 'react-icons/gi';
+import logo from "../public/footerLogo.png"
+import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-amber-900 text-white">
+    <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Cafe Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <GiCoffeeCup className="text-amber-300 text-2xl" />
-              <span className="text-xl font-bold">Agraharam Cafe</span>
+            <div>
+              <img src={logo.src} alt="Company Logo" className="w-32 mb-4" />
+              <p className="text-sm">
+                Agraharam Cafe – Taste that feels like home. Enjoy authentic
+                flavors with a modern twist.
+              </p>
             </div>
             <p className="text-amber-100 mb-4">
               Your go-to destination for pure vegetarian delights! Experience the best of South and North Indian flavors.
             </p>
-            <div className="flex space-x-4">
-              <FaFacebook className="text-amber-300 hover:text-white cursor-pointer text-xl transition-colors duration-200" />
-              <FaInstagram className="text-amber-300 hover:text-white cursor-pointer text-xl transition-colors duration-200" />
-              <FaTwitter className="text-amber-300 hover:text-white cursor-pointer text-xl transition-colors duration-200" />
+          </div>
+
+           <div>
+            <h3 className="text-xl font-semibold mb-4 text-amber-300">Main Link</h3>
+            <div className="space-y-2 text-amber-100">
+              <div>
+                <Link className='text-white' href="/">Home</Link>
+              </div>
+              <div>
+                <Link className='text-white' href="/about">About</Link>
+              </div>
+              <div>
+                <Link className='text-white' href="/contact">Contact</Link>
+              </div>
             </div>
           </div>
 
@@ -62,6 +77,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
+         
         </div>
 
         <div className="border-t border-amber-700 mt-8 pt-8 text-center">
