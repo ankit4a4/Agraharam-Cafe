@@ -5,7 +5,7 @@ import { FaMapMarkerAlt, FaClock, FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const HomeContact = () => {
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 1000, once: true , mirror: true });
     }, []);
 
     return (

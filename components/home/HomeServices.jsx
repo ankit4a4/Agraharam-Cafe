@@ -6,7 +6,7 @@ import { FaUtensils, FaCoffee, FaParking, FaWifi } from "react-icons/fa";
 
 const HomeServices = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false });
+    AOS.init({ duration: 1000, once: false  , mirror: true});
   }, []);
 
   const services = [

@@ -5,7 +5,7 @@ import { FiStar } from 'react-icons/fi';
 
 const Testimonials = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false });
+    AOS.init({ duration: 1000, once: false  , mirror: true});
   }, []);
 
   const testimonials = [

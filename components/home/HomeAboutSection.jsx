@@ -8,7 +8,7 @@ const HomeAboutSection = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false });
+    AOS.init({ duration: 1000, once: false  , mirror: true});
   }, []);
 
   return (

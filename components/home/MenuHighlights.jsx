@@ -13,7 +13,7 @@ import { FaUtensils } from 'react-icons/fa';
 
 const MenuHighlights = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false });
+    AOS.init({ duration: 1000, once: false , mirror: true });
   }, []);
 
   const menuCategories = [

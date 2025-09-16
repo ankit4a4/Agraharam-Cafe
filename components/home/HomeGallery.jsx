@@ -12,7 +12,7 @@ import img8 from "../../public/homepageImages/gallery8.jpg";
 
 const HomeGallery = () => {
     useEffect(() => {
-        AOS.init({ duration: 1000, once: false });
+        AOS.init({ duration: 1000, once: false  , mirror: true});
     }, []);
 
     const images = [
