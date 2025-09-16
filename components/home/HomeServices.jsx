@@ -51,7 +51,7 @@ const HomeServices = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Heading */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-8">
           <p className="text-[#306c36] font-semibold uppercase tracking-widest text-sm border border-[#306c36] px-5 py-2 rounded-full bg-[#306c36]/5 shadow-sm inline-flex items-center">
             <span className="w-2 h-2 bg-[#306c36] rounded-full mr-2"></span>
             What We Offer
@@ -89,7 +89,7 @@ const HomeServices = () => {
                   <h3 className="text-xl font-bold text-[#306c36] group-hover:text-[#c9a66b] transition-colors duration-300 mb-3">
                     {service.name}
                   </h3>
-                  <p className="text-[#555] text-sm leading-relaxed md:opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                  <p className="text-[#555] text-sm leading-relaxed  group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                     {service.description}
                   </p>
                 </div>

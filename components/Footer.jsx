@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Cafe Info */}
           <div>
             <div>
@@ -21,21 +21,6 @@ export default function Footer() {
             <p className="text-amber-100 mb-4">
               Your go-to destination for pure vegetarian delights! Experience the best of South and North Indian flavors.
             </p>
-          </div>
-
-           <div>
-            <h3 className="text-xl font-semibold mb-4 text-amber-300">Main Link</h3>
-            <div className="space-y-2 text-amber-100">
-              <div>
-                <Link className='text-white' href="/">Home</Link>
-              </div>
-              <div>
-                <Link className='text-white' href="/about">About</Link>
-              </div>
-              <div>
-                <Link className='text-white' href="/contact">Contact</Link>
-              </div>
-            </div>
           </div>
 
           {/* Contact Info */}
@@ -82,7 +67,7 @@ export default function Footer() {
 
         <div className="border-t border-amber-700 mt-8 pt-8 text-center">
           <p className="text-amber-200">
-            © 2024 Agraharam Cafe. All rights reserved. Made with ❤️ for food lovers.
+            © 2024 Agraharam Cafe. All rights reserved.
           </p>
         </div>
       </div>

@@ -1,7 +1,6 @@
 'use client';
 
 
-import { FaCar } from 'react-icons/fa';
 import HeroHome from "../components/home/HeroHome"
 import HomeAboutSection from "../components/home/HomeAboutSection"
 import MenuHighlights from "../components/home/MenuHighlights"
