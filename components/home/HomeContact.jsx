@@ -1,7 +1,13 @@
-import React from 'react';
-import { FaMapMarkerAlt, FaClock, FaPhone, FaEnvelope, FaCar, FaWifi, FaParking, FaUtensils } from 'react-icons/fa';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { FaMapMarkerAlt, FaClock, FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const HomeContact = () => {
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+    }, []);
+
     return (
         <section className="md:py-16 py-8 relative overflow-hidden">
             {/* Decorative elements */}
@@ -9,7 +15,7 @@ const HomeContact = () => {
             <div className="absolute bottom-0 right-0 w-40 h-40 bg-amber-200 rounded-full translate-x-20 translate-y-20 opacity-50"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="text-center mb-16">
+                <div data-aos="fade-down" className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-4 font-serif">Visit Agraharam Cafe</h2>
                     <p className="text-lg text-amber-700 max-w-2xl mx-auto">Experience the authentic flavors of South India in a traditional setting</p>
                 </div>
@@ -18,7 +24,7 @@ const HomeContact = () => {
                     {/* Left Column - Contact Information */}
                     <div className="lg:col-span-1 space-y-8">
                         {/* Address Card */}
-                        <div className="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
+                        <div data-aos="fade-up" data-aos-delay={100} className="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
                             <div className="flex items-start space-x-4 mb-4">
                                 <div className="bg-amber-100 p-3 rounded-full">
                                     <FaMapMarkerAlt className="text-amber-700 text-xl" />
@@ -32,11 +38,10 @@ const HomeContact = () => {
                                     </p>
                                 </div>
                             </div>
-
                         </div>
 
                         {/* Hours Card */}
-                        <div className="bg-amber-100 rounded-xl p-6 shadow-lg relative">
+                        <div data-aos="fade-up" data-aos-delay={200} className="bg-amber-100 rounded-xl p-6 shadow-lg relative">
                             <div className="absolute -top-3 right-6 bg-amber-600 text-white px-4 py-1 rounded-full text-sm font-medium">
                                 TODAY'S HOURS
                             </div>
@@ -65,7 +70,7 @@ const HomeContact = () => {
                         </div>
 
                         {/* Contact Card */}
-                        <div className="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
+                        <div data-aos="fade-up" data-aos-delay={300} className="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
                             <div className="flex items-start space-x-4">
                                 <div className="bg-amber-100 p-3 rounded-full">
                                     <FaPhone className="text-amber-700 text-xl" />
@@ -82,14 +87,12 @@ const HomeContact = () => {
                                     </p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
                     {/* Right Column - Map */}
-                    <div className="lg:col-span-2">
+                    <div data-aos="fade-up" data-aos-delay={400} className="lg:col-span-2">
                         <div className="bg-white rounded-xl overflow-hidden shadow-lg h-full">
-
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.7577141922314!2d77.50344266948187!3d13.033707005760576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d005248456f%3A0x95d5a8d375ab3ddf!2sAgraharam%20Cafe!5e0!3m2!1sen!2sin!4v1758003623403!5m2!1sen!2sin"
                                 width="100%"

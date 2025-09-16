@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import {
   GiHotMeal,
   GiChopsticks,
@@ -10,6 +12,10 @@ import { FiCoffee } from 'react-icons/fi';
 import { FaUtensils } from 'react-icons/fa';
 
 const MenuHighlights = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false });
+  }, []);
+
   const menuCategories = [
     { name: 'Idly Items', icon: GiIndianPalace, description: 'Soft, fluffy steamed rice cakes' },
     { name: 'Vada Items', icon: GiTacos, description: 'Crispy, golden fried delights' },
@@ -34,7 +40,7 @@ const MenuHighlights = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div data-aos="fade-down" className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Menu Highlights</h2>
           <p className="text-amber-100 text-lg">
             Discover our wide range of pure vegetarian delicacies
@@ -47,6 +53,8 @@ const MenuHighlights = () => {
             return (
               <div
                 key={index}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
                 className="bg-[#306c36]/10 backdrop-blur-md rounded-xl p-6 border border-[#306c36]/20 hover:border-[#306c36]-300/30 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center group"
                 style={{
                   background: "rgba(255, 255, 255, 0.08)",

@@ -1,22 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ChevronRight, Clock, Users, Heart, Award } from 'lucide-react';
-import img from "../../public/homepageImages/aboutsectionimage.jpg"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import img from "../../public/homepageImages/aboutsectionimage.jpg";
 
 const HomeAboutSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true);
-      },
-      { threshold: 0.3 }
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
-    };
+    AOS.init({ duration: 1000, once: false });
   }, []);
 
   return (
@@ -31,11 +23,7 @@ const HomeAboutSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Image */}
-          <div
-            className={`relative order-1 lg:order-2 ${
-              isVisible ? 'animate-fade-in-right' : 'opacity-0'
-            }`}
-          >
+          <div data-aos="fade-up" className="relative order-1 lg:order-2">
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src={img.src}
@@ -48,16 +36,10 @@ const HomeAboutSection = () => {
             {/* Frame */}
             <div className="absolute hidden md:flex -top-6 -left-6 w-24 h-24 border-t-4 border-l-4 border-[#306c36] rounded-tl-2xl"></div>
             <div className="absolute hidden md:flex -bottom-6 -right-6 w-24 h-24 border-b-4 border-r-4 border-[#c9a66b] rounded-br-2xl"></div>
-
-          
           </div>
 
           {/* Content */}
-          <div
-            className={`order-2 lg:order-1 ${
-              isVisible ? 'animate-fade-in-left' : 'opacity-0'
-            }`}
-          >
+          <div data-aos="fade-up" className="order-2 lg:order-1">
             <div className="mb-4">
               <span className="text-[#306c36] font-semibold tracking-wider uppercase text-sm border border-[#306c36] px-4 py-2 rounded-full bg-[#306c36]/5">
                 Our Story
@@ -123,18 +105,12 @@ const HomeAboutSection = () => {
                 Our Story
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-
-
             </div>
           </div>
         </div>
 
         {/* Signature */}
-        <div
-          className={`mt-16 text-center ${
-            isVisible ? 'animate-fade-in-up' : 'opacity-0'
-          }`}
-        >
+        <div data-aos="fade-up" className="mt-16 text-center">
           <div className="inline-block border-t-2 border-[#c9a66b]/50 w-24 mb-4"></div>
           <p className="text-[#306c36] font-serif text-xl italic">
             "Traditional taste, modern presentation"
@@ -142,49 +118,6 @@ const HomeAboutSection = () => {
           <p className="text-[#c9a66b] mt-2">- Chef Rajesh, Founder</p>
         </div>
       </div>
-
-      {/* Animations */}
-      <style jsx>{`
-        @keyframes fade-in-left {
-          from {
-            opacity: 0;
-            transform: translateX(-30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        @keyframes fade-in-right {
-          from {
-            opacity: 0;
-            transform: translateX(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateX(0);
-          }
-        }
-        @keyframes fade-in-up {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in-left {
-          animation: fade-in-left 0.8s ease-out forwards;
-        }
-        .animate-fade-in-right {
-          animation: fade-in-right 0.8s ease-out forwards;
-        }
-        .animate-fade-in-up {
-          animation: fade-in-up 0.8s ease-out forwards;
-        }
-      `}</style>
     </section>
   );
 };

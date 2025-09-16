@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { FiShoppingBag, FiHome } from "react-icons/fi";
 import { FaUtensils, FaCoffee, FaParking, FaWifi } from "react-icons/fa";
 
 const HomeServices = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false });
+  }, []);
+
   const services = [
     {
       name: "Dine-In",
@@ -51,7 +57,7 @@ const HomeServices = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Heading */}
-        <div className="text-center mb-8">
+        <div data-aos="fade-down" className="text-center mb-8">
           <p className="text-[#306c36] font-semibold uppercase tracking-widest text-sm border border-[#306c36] px-5 py-2 rounded-full bg-[#306c36]/5 shadow-sm inline-flex items-center">
             <span className="w-2 h-2 bg-[#306c36] rounded-full mr-2"></span>
             What We Offer
@@ -71,6 +77,8 @@ const HomeServices = () => {
             return (
               <div
                 key={index}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
                 className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white hover:border-[#c9a66b]/30 hover:-translate-y-2 overflow-hidden"
               >
                 {/* Background pattern */}
@@ -94,7 +102,7 @@ const HomeServices = () => {
                   </p>
                 </div>
 
-                {/* Decorative corner */}
+                {/* Decorative corners */}
                 <div className="absolute bottom-0 right-0 w-6 h-6 border-b-2 border-r-2 border-[#306c36]/20 rounded-bl-2xl transition-colors duration-300 group-hover:border-[#c9a66b]/30"></div>
                 <div className="absolute top-0 left-0 w-6 h-6 border-t-2 border-l-2 border-[#306c36]/20 rounded-tl-2xl transition-colors duration-300 group-hover:border-[#c9a66b]/30"></div>
               </div>
