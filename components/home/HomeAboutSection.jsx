@@ -18,7 +18,7 @@ const HomeAboutSection = () => {
     >
       {/* Decorative Blobs */}
       <div className="absolute top-0 hidden md:flex left-0 w-72 h-72 bg-[#306c36]/20 rounded-full filter blur-3xl -translate-x-32 -translate-y-32"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#c9a66b]/20 rounded-full filter blur-3xl translate-x-32 translate-y-32"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#2f6b35]/20 rounded-full filter blur-3xl translate-x-32 translate-y-32"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -35,7 +35,7 @@ const HomeAboutSection = () => {
 
             {/* Frame */}
             <div className="absolute hidden md:flex -top-6 -left-6 w-24 h-24 border-t-4 border-l-4 border-[#306c36] rounded-tl-2xl"></div>
-            <div className="absolute hidden md:flex -bottom-6 -right-6 w-24 h-24 border-b-4 border-r-4 border-[#c9a66b] rounded-br-2xl"></div>
+            <div className="absolute hidden md:flex -bottom-6 -right-6 w-24 h-24 border-b-4 border-r-4 border-[#2f6b35] rounded-br-2xl"></div>
           </div>
 
           {/* Content */}
@@ -46,8 +46,8 @@ const HomeAboutSection = () => {
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold text-[#306c36] mb-6 leading-tight">
-              Crafting Authentic <span className="text-[#c9a66b]">South Indian</span> Flavors Since 2008
+            <h2 className="text-4xl md:text-5xl font-bold text-[#000] mb-6 leading-tight">
+              Crafting Authentic <span className="text-[#2f6b35]">South Indian</span> Flavors Since 2008
             </h2>
 
             <p className="text-[#333] text-lg leading-relaxed mb-8">
@@ -64,17 +64,17 @@ const HomeAboutSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-[#306c36]">Fresh Daily</p>
-                  <p className="text-sm text-[#c9a66b]">Prepared to order</p>
+                  <p className="text-sm text-[#000]">Prepared to order</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="bg-[#c9a66b]/10 p-3 rounded-full">
-                  <Users className="w-6 h-6 text-[#c9a66b]" />
+                <div className="bg-[#2f6b35]/10 p-3 rounded-full">
+                  <Users className="w-6 h-6 text-[#2f6b35]" />
                 </div>
                 <div>
                   <p className="font-semibold text-[#306c36]">Family Recipe</p>
-                  <p className="text-sm text-[#c9a66b]">Generations of taste</p>
+                  <p className="text-sm text-[#000]">Generations of taste</p>
                 </div>
               </div>
 
@@ -84,17 +84,17 @@ const HomeAboutSection = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-[#306c36]">Made with Love</p>
-                  <p className="text-sm text-[#c9a66b]">Passionate chefs</p>
+                  <p className="text-sm text-[#000]">Passionate chefs</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="bg-[#c9a66b]/10 p-3 rounded-full">
-                  <Award className="w-6 h-6 text-[#c9a66b]" />
+                <div className="bg-[#2f6b35]/10 p-3 rounded-full">
+                  <Award className="w-6 h-6 text-[#2f6b35]" />
                 </div>
                 <div>
                   <p className="font-semibold text-[#306c36]">Award Winning</p>
-                  <p className="text-sm text-[#c9a66b]">Best in town</p>
+                  <p className="text-sm text-[#000]">Best in town</p>
                 </div>
               </div>
             </div>
@@ -111,11 +111,11 @@ const HomeAboutSection = () => {
 
         {/* Signature */}
         <div data-aos="fade-up" className="mt-16 text-center">
-          <div className="inline-block border-t-2 border-[#c9a66b]/50 w-24 mb-4"></div>
+          <div className="inline-block border-t-2 border-[#2f6b35]/50 w-24 mb-4"></div>
           <p className="text-[#306c36] font-serif text-xl italic">
             "Traditional taste, modern presentation"
           </p>
-          <p className="text-[#c9a66b] mt-2">- Chef Rajesh, Founder</p>
+          <p className="text-[#2f6b35] mt-2">- Chef Rajesh, Founder</p>
         </div>
       </div>
     </section>

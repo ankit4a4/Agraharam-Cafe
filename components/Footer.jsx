@@ -13,41 +13,41 @@ export default function Footer() {
           <div>
             <div>
               <img src={logo.src} alt="Company Logo" className="w-32 mb-4" />
-              <p className="text-sm">
+              <p className="text-sm text-gray-300">
                 Agraharam Cafe – Taste that feels like home. Enjoy authentic
                 flavors with a modern twist.
               </p>
             </div>
-            <p className="text-amber-100 mb-4">
+            <p className="text-gray-300 mb-4">
               Your go-to destination for pure vegetarian delights! Experience the best of South and North Indian flavors.
             </p>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-amber-300">Contact Us</h3>
+            <h3 className="text-xl font-semibold mb-4 text-[#76d780]">Contact Us</h3>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
-                <FiMapPin className="text-amber-300 mt-1 flex-shrink-0" />
-                <span className="text-amber-100">
+                <FiMapPin className="text-[#76d780] mt-1 flex-shrink-0" />
+                <span className="text-gray-300">
                   2GM3+MJ9, Andrahalli Main Rd, Gopal Nagar, Venugopal Nagar, Peenya, Bengaluru, Karnataka 560058
                 </span>
               </div>
               <div className="flex items-center space-x-3">
-                <FaPhone className="text-amber-300" />
-                <span className="text-amber-100">+91 98765 43210</span>
+                <FaPhone className="text-[#76d780]" />
+                <span className="text-gray-300">+91 98765 43210</span>
               </div>
               <div className="flex items-center space-x-3">
-                <FaEnvelope className="text-amber-300" />
-                <span className="text-amber-100">info@agraharamcafe.com</span>
+                <FaEnvelope className="text-[#76d780]" />
+                <span className="text-gray-300">info@agraharamcafe.com</span>
               </div>
             </div>
           </div>
 
           {/* Hours */}
           <div>
-            <h3 className="text-xl font-semibold mb-4 text-amber-300">Opening Hours</h3>
-            <div className="space-y-2 text-amber-100">
+            <h3 className="text-xl font-semibold mb-4 text-[#76d780]">Opening Hours</h3>
+            <div className="space-y-2 text-gray-300">
               <div className="flex justify-between">
                 <span>Monday - Friday</span>
                 <span>7:00 AM - 10:00 PM</span>
@@ -65,9 +65,9 @@ export default function Footer() {
          
         </div>
 
-        <div className="border-t border-amber-700 mt-8 pt-8 text-center">
-          <p className="text-amber-200">
-            © 2024 Agraharam Cafe. All rights reserved.
+        <div className="border-t border-white mt-8 pt-8 text-center">
+          <p className="text-white">
+            © 2025 Agraharam Cafe. All rights reserved. | Powered by <a href="https://rankmantra.com/" target='_blank'>Rankmantra</a>
           </p>
         </div>
       </div>

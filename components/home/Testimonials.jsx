@@ -5,7 +5,7 @@ import { FiStar } from 'react-icons/fi';
 
 const Testimonials = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false  , mirror: true});
+    AOS.init({ duration: 1000, once: false, mirror: true });
   }, []);
 
   const testimonials = [
@@ -47,7 +47,7 @@ const Testimonials = () => {
                 ))}
               </div>
               <p className="text-gray-700 mb-4 italic">"{testimonial.comment}"</p>
-              <p className="font-semibold text-amber-800">- {testimonial.name}</p>
+              <p className="font-semibold text-[#2f6b35]">- {testimonial.name}</p>
             </div>
           ))}
         </div>

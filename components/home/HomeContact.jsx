@@ -5,19 +5,19 @@ import { FaMapMarkerAlt, FaClock, FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const HomeContact = () => {
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true , mirror: true });
+        AOS.init({ duration: 1000, once: true, mirror: true });
     }, []);
 
     return (
         <section className="md:py-16 py-8 relative overflow-hidden">
             {/* Decorative elements */}
-            <div className="absolute top-0 left-0 w-32 h-32 bg-amber-200 rounded-full -translate-x-16 -translate-y-16 opacity-50"></div>
-            <div className="absolute bottom-0 right-0 w-40 h-40 bg-amber-200 rounded-full translate-x-20 translate-y-20 opacity-50"></div>
+            <div className="absolute top-0 left-0 w-32 h-32 bg-[#2f6b35]/80 rounded-full -translate-x-16 -translate-y-16 opacity-50"></div>
+            <div className="absolute bottom-0 right-0 w-40 h-40 bg-[#2f6b35]/80 rounded-full translate-x-20 translate-y-20 opacity-50"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div data-aos="fade-down" className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-amber-900 mb-4 font-serif">Visit Agraharam Cafe</h2>
-                    <p className="text-lg text-amber-700 max-w-2xl mx-auto">Experience the authentic flavors of South India in a traditional setting</p>
+                    <h2 className="text-4xl md:text-5xl font-bold text-[#2f6b35] mb-4 font-serif">Visit Agraharam Cafe</h2>
+                    <p className="text-lg text-[#000] max-w-2xl mx-auto">Experience the authentic flavors of South India in a traditional setting</p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -26,8 +26,8 @@ const HomeContact = () => {
                         {/* Address Card */}
                         <div data-aos="fade-up" data-aos-delay={100} className="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
                             <div className="flex items-start space-x-4 mb-4">
-                                <div className="bg-amber-100 p-3 rounded-full">
-                                    <FaMapMarkerAlt className="text-amber-700 text-xl" />
+                                <div className="bg-[#b6f8bc] p-3 rounded-full">
+                                    <FaMapMarkerAlt className="text-[#2f6b35] text-xl" />
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-semibold text-gray-800 mb-2">Our Location</h3>
@@ -41,28 +41,28 @@ const HomeContact = () => {
                         </div>
 
                         {/* Hours Card */}
-                        <div data-aos="fade-up" data-aos-delay={200} className="bg-amber-100 rounded-xl p-6 shadow-lg relative">
-                            <div className="absolute -top-3 right-6 bg-amber-600 text-white px-4 py-1 rounded-full text-sm font-medium">
+                        <div data-aos="fade-up" data-aos-delay={200} className="bg-[#d8ffdc] rounded-xl p-6 shadow-lg relative">
+                            <div className="absolute -top-3 right-6 bg-[#2f6b35] text-white px-4 py-1 rounded-full text-sm font-medium">
                                 TODAY'S HOURS
                             </div>
                             <div className="flex items-start space-x-4">
                                 <div className="bg-white p-3 rounded-full">
-                                    <FaClock className="text-amber-700 text-xl" />
+                                    <FaClock className="text-[#2f6b35] text-xl" />
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-semibold text-gray-800 mb-4">Opening Hours</h3>
                                     <div className="space-y-3">
                                         <div className="flex justify-between">
                                             <span className="text-gray-700">Monday - Friday</span>
-                                            <span className="text-amber-800 font-medium">7:00 AM - 10:00 PM</span>
+                                            <span className="text-[#2f6b35] pl-2 font-medium">7:00 AM - 10:00 PM</span>
                                         </div>
                                         <div className="flex justify-between">
                                             <span className="text-gray-700">Saturday</span>
-                                            <span className="text-amber-800 font-medium">7:00 AM - 11:00 PM</span>
+                                            <span className="text-[#2f6b35] font-medium">7:00 AM - 11:00 PM</span>
                                         </div>
                                         <div className="flex justify-between">
                                             <span className="text-gray-700">Sunday</span>
-                                            <span className="text-amber-800 font-medium">8:00 AM - 10:00 PM</span>
+                                            <span className="text-[#2f6b35] font-medium">8:00 AM - 10:00 PM</span>
                                         </div>
                                     </div>
                                 </div>
@@ -72,17 +72,17 @@ const HomeContact = () => {
                         {/* Contact Card */}
                         <div data-aos="fade-up" data-aos-delay={300} className="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
                             <div className="flex items-start space-x-4">
-                                <div className="bg-amber-100 p-3 rounded-full">
-                                    <FaPhone className="text-amber-700 text-xl" />
+                                <div className="bg-[#b6f8bc] p-3 rounded-full">
+                                    <FaPhone className="text-[#2f6b35] text-xl" />
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-semibold text-gray-800 mb-2">Contact Us</h3>
                                     <p className="text-gray-600 mb-2 flex items-center">
-                                        <FaPhone className="text-amber-600 mr-2" />
+                                        <FaPhone className="text-[#2f6b35] mr-2" />
                                         +91 98765 43210
                                     </p>
                                     <p className="text-gray-600 flex items-center">
-                                        <FaEnvelope className="text-amber-600 mr-2" />
+                                        <FaEnvelope className="text-[#2f6b35] mr-2" />
                                         info@agraharamcafe.com
                                     </p>
                                 </div>

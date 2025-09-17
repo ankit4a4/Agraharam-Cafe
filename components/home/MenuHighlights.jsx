@@ -13,7 +13,7 @@ import { FaUtensils } from 'react-icons/fa';
 
 const MenuHighlights = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false , mirror: true });
+    AOS.init({ duration: 1000, once: false, mirror: true });
   }, []);
 
   const menuCategories = [
@@ -61,7 +61,7 @@ const MenuHighlights = () => {
                   boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.15)",
                 }}
               >
-                <div className="text-amber-300 text-4xl mb-4 flex justify-center transform group-hover:scale-110 transition-transform duration-300">
+                <div className="text-[#5ada67] text-4xl mb-4 flex justify-center transform group-hover:scale-110 transition-transform duration-300">
                   <IconComponent />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -70,7 +70,7 @@ const MenuHighlights = () => {
                 <p className="text-amber-100/90">{category.description}</p>
 
                 {/* Hover effect line */}
-                <div className="w-0 group-hover:w-16 h-0.5 bg-amber-400 mx-auto mt-4 transition-all duration-300"></div>
+                <div className="w-0 group-hover:w-16 h-0.5 bg-[#5ada67] mx-auto mt-4 transition-all duration-300"></div>
               </div>
             );
           })}

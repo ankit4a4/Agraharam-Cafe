@@ -30,7 +30,7 @@ const HomeGallery = () => {
         <section className="md:py-20 py-8">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div data-aos="fade-down" className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-amber-800 mb-4">Our Gallery</h2>
+                    <h2 className="text-4xl font-bold text-[#2f6b35] mb-4">Our Gallery</h2>
                     <p className="text-gray-700 text-lg">A glimpse into our cafe and delicious offerings</p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
