@@ -12,8 +12,8 @@ export default function Navigation() {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/#', label: 'About' },
+    { href: '/#', label: 'Contact' },
   ];
 
   // Disable scroll when mobile menu is open
@@ -59,7 +59,7 @@ export default function Navigation() {
           {/* Right Side Button */}
           <div className="hidden md:flex">
             <Link
-              href="/contact"
+              href="/#"
               className="px-4 py-2 bg-[#2f6b35] text-white rounded-lg shadow hover:bg-[#26562b] transition"
             >
               Get in Touch
@@ -98,7 +98,7 @@ export default function Navigation() {
 
               {/* CTA Button */}
               <Link
-                href="/contact"
+                href="/#"
                 className="block px-3 py-2 bg-[#2f6b35] text-white text-center rounded-md shadow hover:bg-[#26562b] transition"
                 onClick={() => setIsOpen(false)}
               >
