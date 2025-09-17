@@ -59,7 +59,7 @@ const HeroHome = () => {
                 {/* Main Heading */}
                 <h1 data-aos="fade-up" className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight drop-shadow-2xl">
                     <span className="block text-white font-serif">Agraharam</span>
-                    <span className="block  pb-2   mt-1 sm:mt-2 font-serif italic">
+                    <span className="block  pb-2 text-[#38ce47]  mt-1 sm:mt-2 font-serif italic">
                         Café
                     </span>
                 </h1>
