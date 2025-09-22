@@ -25,14 +25,13 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setSubmitMessage('Thank you for your message! We\'ll get back to you soon.');
       setFormData({ name: '', email: '', message: '' });
       setIsSubmitting(false);
-      
-      // Clear success message after 5 seconds
+
       setTimeout(() => setSubmitMessage(''), 5000);
     }, 1500);
   };
@@ -40,28 +39,29 @@ export default function Contact() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="relative h-96 bg-gradient-to-r from-green-600 to-amber-600 flex items-center justify-center">
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <section className="relative h-96 flex items-center justify-center">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url('/homepageImages/banner2.jpg')` }}></div>
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-5xl md:text-6xl font-bold mb-4">Contact Us</h1>
           <p className="text-xl md:text-2xl">We'd love to hear from you. Get in touch!</p>
         </div>
       </section>
 
-      {/* Contact Information & Form */}
-      <section className="py-20 bg-white">
+      {/* Contact Info & Form */}
+      <section className="py-8 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
+
+            {/* Contact Info */}
             <div>
-              <h2 className="text-4xl font-bold text-amber-800 mb-8">Get in Touch</h2>
-              
+              <h2 className="text-4xl font-bold text-green-800 mb-8">Get in Touch</h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <FiMapPin className="text-amber-600 text-2xl mt-1 flex-shrink-0" />
+                  <FiMapPin className="text-green-600 text-2xl mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Address</h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <h3 className="text-xl font-semibold text-green-800 mb-2">Address</h3>
+                    <p className="text-gray-700 leading-relaxed">
                       2GM3+MJ9, Andrahalli Main Rd<br />
                       Gopal Nagar, Venugopal Nagar<br />
                       Peenya, Bengaluru, Karnataka 560058
@@ -72,27 +72,27 @@ export default function Contact() {
                 <div className="flex items-center space-x-4">
                   <FaPhone className="text-green-600 text-2xl" />
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Phone</h3>
-                    <p className="text-gray-600">+91 98765 43210</p>
-                    <p className="text-gray-600">+91 87654 32109</p>
+                    <h3 className="text-xl font-semibold text-green-800 mb-2">Phone</h3>
+                    <p className="text-gray-700">+91 98765 43210</p>
+                    <p className="text-gray-700">+91 87654 32109</p>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <FaEnvelope className="text-amber-600 text-2xl" />
+                  <FaEnvelope className="text-green-600 text-2xl" />
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-2">Email</h3>
-                    <p className="text-gray-600">info@agraharamcafe.com</p>
-                    <p className="text-gray-600">orders@agraharamcafe.com</p>
+                    <h3 className="text-xl font-semibold text-green-800 mb-2">Email</h3>
+                    <p className="text-gray-700">info@agraharamcafe.com</p>
+                    <p className="text-gray-700">orders@agraharamcafe.com</p>
                   </div>
                 </div>
               </div>
 
               {/* Opening Hours */}
-              <div className="mt-8 bg-amber-50 rounded-lg p-6">
+              <div className="mt-8 bg-green-100 rounded-lg p-6">
                 <div className="flex items-center space-x-3 mb-4">
-                  <FaClock className="text-amber-600 text-2xl" />
-                  <h3 className="text-2xl font-bold text-amber-800">Opening Hours</h3>
+                  <FaClock className="text-green-600 text-2xl" />
+                  <h3 className="text-2xl font-bold text-green-800">Opening Hours</h3>
                 </div>
                 <div className="space-y-2">
                   <div className="flex justify-between">
@@ -111,7 +111,7 @@ export default function Contact() {
               </div>
 
               {/* Facilities */}
-              <div className="mt-6 bg-green-50 rounded-lg p-6">
+              <div className="mt-6 bg-green-100 rounded-lg p-6">
                 <h3 className="text-xl font-bold text-green-800 mb-4">Facilities</h3>
                 <div className="flex items-center space-x-3">
                   <FaCar className="text-green-600 text-xl" />
@@ -121,20 +121,18 @@ export default function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-gray-50 rounded-lg p-8 shadow-lg">
+            <div className="bg-green-50 rounded-lg p-8 shadow-lg">
               <h2 className="text-3xl font-bold text-green-800 mb-6">Send us a Message</h2>
-              
+
               {submitMessage && (
-                <div className="mb-6 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg">
+                <div className="mb-6 bg-green-200 border border-green-400 text-green-700 px-4 py-3 rounded-lg">
                   {submitMessage}
                 </div>
               )}
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name *
-                  </label>
+                  <label htmlFor="name" className="block text-sm font-medium text-green-800 mb-2">Full Name *</label>
                   <input
                     type="text"
                     id="name"
@@ -142,15 +140,13 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
                     placeholder="Enter your full name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address *
-                  </label>
+                  <label htmlFor="email" className="block text-sm font-medium text-green-800 mb-2">Email Address *</label>
                   <input
                     type="email"
                     id="email"
@@ -158,15 +154,13 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-colors duration-200"
+                    className="w-full px-4 py-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200"
                     placeholder="Enter your email address"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
+                  <label htmlFor="message" className="block text-sm font-medium text-green-800 mb-2">Message *</label>
                   <textarea
                     id="message"
                     name="message"
@@ -174,7 +168,7 @@ export default function Contact() {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-colors duration-200 resize-vertical"
+                    className="w-full px-4 py-3 border border-green-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors duration-200 resize-vertical"
                     placeholder="Tell us how we can help you..."
                   ></textarea>
                 </div>
@@ -182,7 +176,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-amber-600 hover:bg-amber-700 disabled:bg-amber-400 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="w-full bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                 >
                   {isSubmitting ? (
                     <>
@@ -203,37 +197,36 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="py-20 bg-amber-50">
+      <section className="py-8 md:py-20 bg-green-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-amber-800 mb-4">Find Our Location</h2>
+            <h2 className="text-4xl font-bold text-green-800 mb-4">Find Our Location</h2>
             <p className="text-gray-700 text-lg">Easy to locate with ample parking space</p>
           </div>
-          
+
           <div className="rounded-lg overflow-hidden shadow-xl h-96">
+           
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.842123456789!2d77.5385!3d13.0352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDI0JzQwLjciTiA3N8KwMzInMTguNyJF!5e0!3m2!1sen!2sin!4v1234567890"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001.3141428020667!2d77.50151147367264!3d13.03371091351631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d005248456f%3A0x95d5a8d375ab3ddf!2sAgraharam%20Cafe!5e1!3m2!1sen!2sus!4v1758526001018!5m2!1sen!2sus"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Agraharam Cafe Location"
+              title="Agraharam Cafe Location "
             ></iframe>
           </div>
 
           <div className="mt-8 text-center">
-            <p className="text-gray-600 mb-4">
-              Located on Andrahalli Main Road, easily accessible by car and public transport
-            </p>
-            <div className="flex justify-center items-center space-x-6 text-sm text-gray-600">
+           
+            <div className="flex justify-center items-center space-x-6 text-sm text-gray-700">
               <div className="flex items-center space-x-2">
                 <FaCar className="text-green-600" />
                 <span>Free Parking</span>
               </div>
               <div className="flex items-center space-x-2">
-                <FiMapPin className="text-amber-600" />
+                <FiMapPin className="text-green-600" />
                 <span>Easy to Find</span>
               </div>
             </div>
@@ -242,13 +235,13 @@ export default function Contact() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-green-600 text-white text-center">
+      <section className="py-8 md:py-16 bg-green-600 text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-4">Ready to Experience Our Delicious Food?</h2>
           <p className="text-xl mb-8">Visit us today or place an order for delivery!</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="tel:+919876543210" 
+            <a
+              href="tel:+919876543210"
               className="bg-white text-green-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
             >
               Call Now: +91 98765 43210

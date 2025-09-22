@@ -40,7 +40,7 @@ const MenuHighlights = () => {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div data-aos="fade-down" className="text-center mb-16">
+        <div data-aos="fade-down" className="text-center mb-5 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Menu Highlights</h2>
           <p className="text-amber-100 text-lg">
             Discover our wide range of pure vegetarian delicacies

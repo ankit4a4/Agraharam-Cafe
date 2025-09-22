@@ -25,7 +25,7 @@ const HomeContact = () => {
                     <div className="lg:col-span-1 space-y-8">
                         {/* Address Card */}
                         <div data-aos="fade-up" data-aos-delay={100} className="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
-                            <div className="flex items-start space-x-4 mb-4">
+                            <div className="flex flex-col md:flex-row items-start space-x-4 mb-4">
                                 <div className="bg-[#b6f8bc] p-3 rounded-full">
                                     <FaMapMarkerAlt className="text-[#2f6b35] text-xl" />
                                 </div>
@@ -45,7 +45,7 @@ const HomeContact = () => {
                             <div className="absolute -top-3 right-6 bg-[#2f6b35] text-white px-4 py-1 rounded-full text-sm font-medium">
                                 TODAY'S HOURS
                             </div>
-                            <div className="flex items-start space-x-4">
+                            <div className="flex flex-col md:flex-row items-start space-x-4">
                                 <div className="bg-white p-3 rounded-full">
                                     <FaClock className="text-[#2f6b35] text-xl" />
                                 </div>
@@ -71,7 +71,7 @@ const HomeContact = () => {
 
                         {/* Contact Card */}
                         <div data-aos="fade-up" data-aos-delay={300} className="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
-                            <div className="flex items-start space-x-4">
+                            <div className="flex flex-col md:flex-row items-start space-x-4">
                                 <div className="bg-[#b6f8bc] p-3 rounded-full">
                                     <FaPhone className="text-[#2f6b35] text-xl" />
                                 </div>
@@ -97,12 +97,12 @@ const HomeContact = () => {
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.7577141922314!2d77.50344266948187!3d13.033707005760576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d005248456f%3A0x95d5a8d375ab3ddf!2sAgraharam%20Cafe!5e0!3m2!1sen!2sin!4v1758003623403!5m2!1sen!2sin"
                                 width="100%"
                                 height="100%"
-                                style={{ border: 0, minHeight: '500px' }}
+                                style={{ border: 0,  }}
                                 allowFullScreen=""
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"
                                 title="Agraharam Cafe Location"
-                                className="rounded-xl"
+                                className="rounded-xl md:h-[500px]"
                             ></iframe>
                         </div>
                     </div>

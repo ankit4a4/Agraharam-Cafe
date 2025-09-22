@@ -3,12 +3,14 @@ import { ChevronRight, Clock, Users, Heart, Award } from 'lucide-react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import img from "../../public/homepageImages/aboutsectionimage.jpg";
+import { useRouter } from 'next/navigation';
 
 const HomeAboutSection = () => {
+  const router = useRouter()
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false  , mirror: true});
+    AOS.init({ duration: 1000, once: false, mirror: true });
   }, []);
 
   return (
@@ -28,7 +30,7 @@ const HomeAboutSection = () => {
               <img
                 src={img.src}
                 alt="South Indian Food"
-                className="w-full h-96 object-cover transform hover:scale-105 transition-transform duration-700"
+                className="w-full md:h-96 object-cover transform hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             </div>
@@ -41,7 +43,9 @@ const HomeAboutSection = () => {
           {/* Content */}
           <div data-aos="fade-up" className="order-2 lg:order-1">
             <div className="mb-4">
-              <span className="text-[#306c36] font-semibold tracking-wider uppercase text-sm border border-[#306c36] px-4 py-2 rounded-full bg-[#306c36]/5">
+              <span
+
+                className="text-[#306c36] font-semibold tracking-wider uppercase text-sm border border-[#306c36] px-4 py-2 rounded-full bg-[#306c36]/5">
                 Our Story
               </span>
             </div>
@@ -58,7 +62,7 @@ const HomeAboutSection = () => {
 
             {/* Features */}
             <div className="grid grid-cols-2 gap-6 mb-8">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 md:flex-row flex-col">
                 <div className="bg-[#306c36]/10 p-3 rounded-full">
                   <Clock className="w-6 h-6 text-[#306c36]" />
                 </div>
@@ -68,7 +72,7 @@ const HomeAboutSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 md:flex-row flex-col">
                 <div className="bg-[#2f6b35]/10 p-3 rounded-full">
                   <Users className="w-6 h-6 text-[#2f6b35]" />
                 </div>
@@ -78,7 +82,7 @@ const HomeAboutSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 md:flex-row flex-col">
                 <div className="bg-[#306c36]/10 p-3 rounded-full">
                   <Heart className="w-6 h-6 text-[#306c36]" />
                 </div>
@@ -88,7 +92,7 @@ const HomeAboutSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 md:flex-row flex-col">
                 <div className="bg-[#2f6b35]/10 p-3 rounded-full">
                   <Award className="w-6 h-6 text-[#2f6b35]" />
                 </div>
@@ -101,7 +105,9 @@ const HomeAboutSection = () => {
 
             {/* Buttons */}
             <div className="flex flex-row sm:flex-row gap-4">
-              <button className="bg-[#306c36] hover:bg-[#245428] text-white px-8 py-4 rounded-full font-semibold text-center transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2 group">
+              <button
+                onClick={() => router.push("/about")}
+                className="bg-[#306c36] hover:bg-[#245428] text-white px-8 py-4 rounded-full font-semibold text-center transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2 group">
                 Our Story
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>

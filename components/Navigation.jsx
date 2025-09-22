@@ -12,11 +12,10 @@ export default function Navigation() {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/#', label: 'About' },
-    { href: '/#', label: 'Contact' },
+    { href: '/about', label: 'About' },
+    { href: '/contact', label: 'Contact' },
   ];
 
-  // Disable scroll when mobile menu is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
@@ -45,11 +44,10 @@ export default function Navigation() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`font-medium transition-colors duration-200 ${
-                  pathname === item.href
-                    ? 'text-[#2f6b35] border-b-2 border-[#2f6b35]'
-                    : 'text-gray-800 hover:text-[#2f6b35]'
-                }`}
+                className={`font-medium transition-colors duration-200 ${pathname === item.href
+                  ? 'text-[#2f6b35] border-b-2 border-[#2f6b35]'
+                  : 'text-gray-800 hover:text-[#2f6b35]'
+                  }`}
               >
                 {item.label}
               </Link>
@@ -59,7 +57,7 @@ export default function Navigation() {
           {/* Right Side Button */}
           <div className="hidden md:flex">
             <Link
-              href="/#"
+              href="/contact"
               className="px-4 py-2 bg-[#2f6b35] text-white rounded-lg shadow hover:bg-[#26562b] transition"
             >
               Get in Touch
@@ -85,11 +83,10 @@ export default function Navigation() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`block px-3 py-2 rounded-md font-medium transition-colors duration-200 ${
-                    pathname === item.href
-                      ? 'text-[#2f6b35] bg-[#2f6b35]/10'
-                      : 'text-gray-800 hover:text-[#2f6b35]'
-                  }`}
+                  className={`block px-3 py-2 rounded-md font-medium transition-colors duration-200 ${pathname === item.href
+                    ? 'text-[#2f6b35] bg-[#2f6b35]/10'
+                    : 'text-gray-800 hover:text-[#2f6b35]'
+                    }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
@@ -98,7 +95,7 @@ export default function Navigation() {
 
               {/* CTA Button */}
               <Link
-                href="/#"
+                href="/contact"
                 className="block px-3 py-2 bg-[#2f6b35] text-white text-center rounded-md shadow hover:bg-[#26562b] transition"
                 onClick={() => setIsOpen(false)}
               >
