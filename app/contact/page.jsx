@@ -246,9 +246,7 @@ export default function Contact() {
             >
               Call Now: +91 98765 43210
             </a>
-            <button className="bg-transparent border-2 border-white hover:bg-white hover:text-green-600 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-300">
-              Order Online
-            </button>
+          
           </div>
         </div>
       </section>
