@@ -53,17 +53,10 @@ const HomeContact = () => {
                                     <h3 className="text-xl font-semibold text-gray-800 mb-4">Opening Hours</h3>
                                     <div className="space-y-3">
                                         <div className="flex justify-between">
-                                            <span className="text-gray-700">Monday - Friday</span>
-                                            <span className="text-[#2f6b35] pl-2 font-medium">7:00 AM - 10:00 PM</span>
+                                            <span className="text-gray-700">Monday - Sunday</span>
+                                            <span className="text-[#2f6b35] pl-2 font-medium">6:00 AM - 10:00 PM</span>
                                         </div>
-                                        <div className="flex justify-between">
-                                            <span className="text-gray-700">Saturday</span>
-                                            <span className="text-[#2f6b35] font-medium">7:00 AM - 11:00 PM</span>
-                                        </div>
-                                        <div className="flex justify-between">
-                                            <span className="text-gray-700">Sunday</span>
-                                            <span className="text-[#2f6b35] font-medium">8:00 AM - 10:00 PM</span>
-                                        </div>
+                                      
                                     </div>
                                 </div>
                             </div>

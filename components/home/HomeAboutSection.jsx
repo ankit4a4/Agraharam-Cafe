@@ -51,7 +51,7 @@ const HomeAboutSection = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold text-[#000] mb-6 leading-tight">
-              Crafting Authentic <span className="text-[#2f6b35]">South Indian</span> Flavors Since 2008
+              Crafting Authentic <span className="text-[#2f6b35]">South Indian</span> Flavors Since 2018
             </h2>
 
             <p className="text-[#333] text-lg leading-relaxed mb-8">

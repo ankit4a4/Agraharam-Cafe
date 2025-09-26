@@ -2,6 +2,8 @@ import { GiIndianPalace, GiHotMeal, GiLeafSwirl } from 'react-icons/gi';
 import { FaHeart, FaUsers, FaLeaf } from 'react-icons/fa';
 import img from "../../public/homepageImages/banner3.jpg"
 import img2 from "../../public/homepageImages/aboutsectionimage.jpg";
+import { TbTargetArrow } from "react-icons/tb";
+import { ImCompass2 } from "react-icons/im";
 
 export default function About() {
   const values = [
@@ -89,7 +91,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-green-600 text-4xl mb-6 flex justify-center">
-                <GiIndianPalace />
+                <TbTargetArrow />
               </div>
               <h3 className="text-3xl font-bold text-green-800 mb-4 text-center">Our Mission</h3>
               <p className="text-gray-700 text-lg leading-relaxed text-center">
@@ -101,7 +103,7 @@ export default function About() {
 
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="text-green-600 text-4xl mb-6 flex justify-center">
-                <GiHotMeal />
+                <ImCompass2 />
               </div>
               <h3 className="text-3xl font-bold text-green-800 mb-4 text-center">Our Vision</h3>
               <p className="text-gray-700 text-lg leading-relaxed text-center">
@@ -187,7 +189,7 @@ export default function About() {
       </section>
 
       {/* Team Philosophy */}
-      <section className="py- md:py-20 bg-green-900 text-white">
+      <section className="py- md:py-20 bg-[#306c35] border-b border-white text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-8">Our Philosophy</h2>
           <div className="max-w-4xl mx-auto">

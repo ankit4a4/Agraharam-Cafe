@@ -9,10 +9,11 @@ import img5 from "../../public/homepageImages/gallery5.jpg";
 import img6 from "../../public/homepageImages/gallery6.jpg";
 import img7 from "../../public/homepageImages/gallery7.jpg";
 import img8 from "../../public/homepageImages/gallery8.jpg";
+import { useRouter } from 'next/navigation';
 
 const HomeGallery = () => {
     useEffect(() => {
-        AOS.init({ duration: 1000, once: false  , mirror: true});
+        AOS.init({ duration: 1000, once: false, mirror: true });
     }, []);
 
     const images = [
@@ -26,14 +27,16 @@ const HomeGallery = () => {
         img8.src,
     ];
 
+    const router = useRouter()
+
     return (
         <section className="md:py-20 py-8">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center ">
                 <div data-aos="fade-down" className="text-center mb-16">
                     <h2 className="text-4xl font-bold text-[#2f6b35] mb-4">Our Gallery</h2>
                     <p className="text-gray-700 text-lg">A glimpse into our cafe and delicious offerings</p>
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
                     {images.map((src, index) => (
                         <div
                             key={index}
@@ -49,6 +52,9 @@ const HomeGallery = () => {
                         </div>
                     ))}
                 </div>
+                <button
+                onClick={() => router.push("/gallery")}
+                 className='mt-10 text-white px-12 rounded-lg m-auto py-3 bg-[#2f6b35]'>View Gallery</button>
             </div>
         </section>
     );

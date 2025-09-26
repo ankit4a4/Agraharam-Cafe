@@ -10,6 +10,7 @@ import {
 } from 'react-icons/gi';
 import { FiCoffee } from 'react-icons/fi';
 import { FaUtensils } from 'react-icons/fa';
+import { FaCircle } from "react-icons/fa6";
 
 const MenuHighlights = () => {
   useEffect(() => {
@@ -17,11 +18,11 @@ const MenuHighlights = () => {
   }, []);
 
   const menuCategories = [
-    { name: 'Idly Items', icon: GiIndianPalace, description: 'Soft, fluffy steamed rice cakes' },
-    { name: 'Vada Items', icon: GiTacos, description: 'Crispy, golden fried delights' },
-    { name: 'Dosa Items', icon: GiHotMeal, description: 'Crispy crepes with various fillings' },
-    { name: 'Rice & Mini Tiffin', icon: FiCoffee, description: 'Hearty rice dishes and light meals' },
-    { name: 'Roti & Lunch', icon: FaUtensils, description: 'North Indian breads and meals' },
+    { name: 'Idli', icon: FaCircle, description: 'Soft, fluffy steamed rice cakes' },
+    { name: 'Vada ', icon: GiTacos, description: 'Crispy, golden fried delights' },
+    { name: 'Dosa ', icon: GiHotMeal, description: 'Crispy crepes with various fillings' },
+    { name: 'Tea & Coffee', icon: FiCoffee, description: 'Hearty rice dishes and light meals' },
+    { name: 'Lunch & Dinner', icon: FaUtensils, description: 'North Indian breads and meals' },
     { name: 'Chinese', icon: GiChopsticks, description: 'Indo-Chinese fusion favorites' },
     { name: 'Snacks', icon: GiTacos, description: 'Quick bites and evening treats' },
     { name: 'Beverages', icon: GiGlassCelebration, description: 'Fresh juices, shakes, and more' },
@@ -61,7 +62,7 @@ const MenuHighlights = () => {
                   boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.15)",
                 }}
               >
-                <div className="text-[#5ada67] text-4xl mb-4 flex justify-center transform group-hover:scale-110 transition-transform duration-300">
+                <div className="text-[#2f6b35] text-4xl mb-4 flex justify-center transform group-hover:scale-110 transition-transform duration-300">
                   <IconComponent />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -70,7 +71,7 @@ const MenuHighlights = () => {
                 <p className="text-amber-100/90">{category.description}</p>
 
                 {/* Hover effect line */}
-                <div className="w-0 group-hover:w-16 h-0.5 bg-[#5ada67] mx-auto mt-4 transition-all duration-300"></div>
+                <div className="w-0 group-hover:w-16 h-0.5 bg-[#2f6b35] mx-auto mt-4 transition-all duration-300"></div>
               </div>
             );
           })}
