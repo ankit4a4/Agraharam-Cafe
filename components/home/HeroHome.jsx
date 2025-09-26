@@ -78,7 +78,7 @@ const HeroHome = () => {
                 </p>
 
                 {/* CTA Buttons */}
-                <div data-aos="fade-up" data-aos-delay="500" className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mt-3">
+                {/* <div data-aos="fade-up" data-aos-delay="500" className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mt-3">
 
                     <Link
                         href="/contact"
@@ -86,7 +86,7 @@ const HeroHome = () => {
                     >
                         Contact Us
                     </Link>
-                </div>
+                </div> */}
             </div>
         </section>
     );

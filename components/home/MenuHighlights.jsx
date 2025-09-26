@@ -11,6 +11,7 @@ import {
 import { FiCoffee } from 'react-icons/fi';
 import { FaUtensils } from 'react-icons/fa';
 import { FaCircle } from "react-icons/fa6";
+import { LuUtensilsCrossed } from "react-icons/lu";
 
 const MenuHighlights = () => {
   useEffect(() => {
@@ -18,14 +19,14 @@ const MenuHighlights = () => {
   }, []);
 
   const menuCategories = [
-    { name: 'Idli', icon: FaCircle, description: 'Soft, fluffy steamed rice cakes' },
+    { name: 'Idli', icon: LuUtensilsCrossed, description: 'Soft, fluffy steamed rice cakes' },
     { name: 'Vada ', icon: GiTacos, description: 'Crispy, golden fried delights' },
     { name: 'Dosa ', icon: GiHotMeal, description: 'Crispy crepes with various fillings' },
     { name: 'Tea & Coffee', icon: FiCoffee, description: 'Hearty rice dishes and light meals' },
     { name: 'Lunch & Dinner', icon: FaUtensils, description: 'North Indian breads and meals' },
     { name: 'Chinese', icon: GiChopsticks, description: 'Indo-Chinese fusion favorites' },
     { name: 'Snacks', icon: GiTacos, description: 'Quick bites and evening treats' },
-    { name: 'Beverages', icon: GiGlassCelebration, description: 'Fresh juices, shakes, and more' },
+    { name: 'Pure Juices', icon: GiGlassCelebration, description: 'Fresh juices, shakes, and more' },
   ];
 
   return (
