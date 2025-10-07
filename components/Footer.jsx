@@ -36,7 +36,7 @@ export default function Footer() {
                 <span className="text-gray-300">+91 98765 43210</span>
               </div>
               <div className="flex items-center space-x-3">
-                <FaEnvelope className="text-[#76d780]" />
+                <FaEnvelope className="text-[#fff]" />
                 <span className="text-gray-300">info@agraharamcafe.com</span>
               </div>
             </div>
