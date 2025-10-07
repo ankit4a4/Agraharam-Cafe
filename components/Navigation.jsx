@@ -13,8 +13,8 @@ export default function Navigation() {
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
     { href: '/gallery', label: 'Gallery' },
+    { href: '/contact', label: 'Contact' },
   ];
 
   useEffect(() => {
