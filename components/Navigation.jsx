@@ -24,7 +24,6 @@ export default function Navigation() {
       document.body.style.overflow = '';
     }
 
-    // Cleanup when component unmounts
     return () => {
       document.body.style.overflow = '';
     };
@@ -39,7 +38,6 @@ export default function Navigation() {
             <img src={logo.src} className="h-[50px] w-auto object-contain" alt="Logo" />
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex flex-1 justify-center space-x-8">
             {navItems.map((item) => (
               <Link
@@ -55,7 +53,6 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Right Side Button */}
           <div className="hidden md:flex">
             <Link
               href="/contact"
@@ -65,7 +62,6 @@ export default function Navigation() {
             </Link>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -76,7 +72,6 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Mobile Dropdown Navigation */}
         {isOpen && (
           <div className="md:hidden">
             <div className="px-4 pt-2 pb-3 space-y-2 bg-white border-t border-gray-200 shadow">

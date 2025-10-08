@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import img1 from "../../public/homepageImages/gallery1.jpg";
-import img2 from "../../public/homepageImages/gallery2.jpg";
-import img3 from "../../public/homepageImages/gallery3.jpg";
-import img4 from "../../public/homepageImages/gallery4.jpg";
-import img5 from "../../public/homepageImages/gallery5.jpg";
-import img6 from "../../public/homepageImages/gallery6.jpg";
-import img7 from "../../public/homepageImages/gallery7.jpg";
-import img8 from "../../public/homepageImages/gallery8.jpg";
+import img1 from "../../public/galleryPagePhotos&video/28.jpg";
+import img2 from "../../public/galleryPagePhotos&video/29.jpg";
+import img3 from "../../public/galleryPagePhotos&video/30.jpg";
+import img4 from "../../public/galleryPagePhotos&video/4.jpg";
+import img5 from "../../public/galleryPagePhotos&video/5.jpg";
+import img6 from "../../public/galleryPagePhotos&video/6.jpg";
+import img7 from "../../public/galleryPagePhotos&video/7.jpg";
+import img8 from "../../public/galleryPagePhotos&video/8.jpg";
 import { useRouter } from 'next/navigation';
 
 const HomeGallery = () => {
@@ -47,14 +47,14 @@ const HomeGallery = () => {
                             <img
                                 src={src}
                                 alt={`Gallery ${index + 1}`}
-                                className="w-full h-48 object-cover hover:scale-110 transition-transform duration-500"
+                                className="w-full h-48 object-contain hover:scale-110 transition-transform duration-500"
                             />
                         </div>
                     ))}
                 </div>
                 <button
-                onClick={() => router.push("/gallery")}
-                 className='mt-10 text-white px-12 rounded-lg m-auto py-3 bg-[#2f6b35]'>View Gallery</button>
+                    onClick={() => router.push("/gallery")}
+                    className='mt-10 text-white px-12 rounded-lg m-auto py-3 bg-[#2f6b35]'>View Gallery</button>
             </div>
         </section>
     );

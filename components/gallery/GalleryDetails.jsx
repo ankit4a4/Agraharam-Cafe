@@ -1,16 +1,42 @@
 'use client'
 import React from 'react';
-import img1 from "../../public/homepageImages/gallery1.jpg"
-import img2 from "../../public/homepageImages/gallery2.jpg"
-import img3 from "../../public/homepageImages/gallery3.jpg"
-import img4 from "../../public/homepageImages/gallery4.jpg"
-import img5 from "../../public/homepageImages/gallery5.jpg"
-import img6 from "../../public/homepageImages/gallery6.jpg"
-import img7 from "../../public/homepageImages/gallery7.jpg"
-import img8 from "../../public/homepageImages/gallery8.jpg"
+
+
+import img1 from "../../public/galleryPagePhotos&video/1.jpg";
+import img2 from "../../public/galleryPagePhotos&video/2.jpg";
+import img3 from "../../public/galleryPagePhotos&video/3.jpg";
+import img4 from "../../public/galleryPagePhotos&video/4.jpg";
+import img5 from "../../public/galleryPagePhotos&video/5.jpg";
+import img6 from "../../public/galleryPagePhotos&video/6.jpg";
+import img7 from "../../public/galleryPagePhotos&video/7.jpg";
+import img8 from "../../public/galleryPagePhotos&video/8.jpg";
+import img9 from "../../public/galleryPagePhotos&video/9.jpg";
+import img10 from "../../public/galleryPagePhotos&video/10.jpg";
+import img11 from "../../public/galleryPagePhotos&video/11.jpg";
+import img12 from "../../public/galleryPagePhotos&video/12.jpg";
+import img13 from "../../public/galleryPagePhotos&video/13.jpg";
+import img14 from "../../public/galleryPagePhotos&video/14.jpg";
+import img15 from "../../public/galleryPagePhotos&video/15.jpg";
+import img17 from "../../public/galleryPagePhotos&video/17.jpg";
+import img18 from "../../public/galleryPagePhotos&video/18.jpg";
+import img19 from "../../public/galleryPagePhotos&video/19.jpg";
+import img20 from "../../public/galleryPagePhotos&video/20.jpg";
+import img21 from "../../public/galleryPagePhotos&video/21.jpg";
+import img22 from "../../public/galleryPagePhotos&video/22.jpg";
+import img23 from "../../public/galleryPagePhotos&video/23.jpg";
+import img24 from "../../public/galleryPagePhotos&video/24.jpg";
+import img25 from "../../public/galleryPagePhotos&video/25.jpg";
+import img26 from "../../public/galleryPagePhotos&video/26.jpg";
+import img27 from "../../public/galleryPagePhotos&video/27.jpg";
+import img28 from "../../public/galleryPagePhotos&video/28.jpg";
+import img29 from "../../public/galleryPagePhotos&video/29.jpg";
+import img30 from "../../public/galleryPagePhotos&video/30.jpg";
 
 const GalleryDetails = () => {
     const photos = [
+        { id: 28, src: img28.src, title: '' },
+        { id: 29, src: img29.src, title: '' },
+        { id: 30, src: img30.src, title: '' },
         { id: 1, src: img1.src, title: '' },
         { id: 2, src: img2.src, title: '' },
         { id: 3, src: img3.src, title: '' },
@@ -19,21 +45,35 @@ const GalleryDetails = () => {
         { id: 6, src: img6.src, title: '' },
         { id: 7, src: img7.src, title: '' },
         { id: 8, src: img8.src, title: '' },
-        { id: 9, src: 'https://picsum.photos/400/600', title: '' },
-        { id: 10, src: 'https://picsum.photos/400/560', title: '' },
+        { id: 9, src: img9.src, title: '' },
+        { id: 10, src: img10.src, title: '' },
+        { id: 11, src: img11.src, title: '' },
+        { id: 12, src: img12.src, title: '' },
+        { id: 13, src: img13.src, title: '' },
+        { id: 14, src: img14.src, title: '' },
+        { id: 15, src: img15.src, title: '' },
+        { id: 17, src: img17.src, title: '' },
+        { id: 18, src: img18.src, title: '' },
+        { id: 19, src: img19.src, title: '' },
+        { id: 20, src: img20.src, title: '' },
+        { id: 21, src: img21.src, title: '' },
+        { id: 22, src: img22.src, title: '' },
+        { id: 23, src: img23.src, title: '' },
+        { id: 24, src: img24.src, title: '' },
+        { id: 25, src: img25.src, title: '' },
+        { id: 26, src: img26.src, title: '' },
+        { id: 27, src: img27.src, title: '' },
+
     ];
 
     const videos = [
-        { id: 1, src: "https://www.w3schools.com/html/mov_bbb.mp4", title: "" },
-        { id: 2, src: "https://samplelib.com/lib/preview/mp4/sample-10s.mp4", title: "" },
-        { id: 3, src: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4", title: "" },
-        { id: 4, src: "https://samplelib.com/lib/preview/mp4/sample-5s.mp4", title: "" },
-        { id: 5, src: "https://samplelib.com/lib/preview/mp4/sample-10s.mp4", title: "" },
-        { id: 6, src: "https://www.w3schools.com/html/mov_bbb.mp4", title: "" },
+        { id: 1, src: "https://res.cloudinary.com/dptqmtyot/video/upload/v1759920830/Cafe_Testimonial_4_purwui.mp4", title: "" },
+        { id: 2, src: "https://res.cloudinary.com/dptqmtyot/video/upload/v1759920828/Cafe_Testimonial_5_xamkiu.mp4", title: "" },
+        { id: 3, src: "https://res.cloudinary.com/dptqmtyot/video/upload/v1759920813/Cafe_z3hcxs.mp4", title: "" },
+        { id: 4, src: "https://res.cloudinary.com/dptqmtyot/video/upload/v1759920807/Cafe_Testimonial_3_irgkdh.mp4", title: "" },
+        { id: 6, src: "https://res.cloudinary.com/dptqmtyot/video/upload/v1759920804/Cafe_Testimonial_2_wfonnx.mp4", title: "" },
     ];
 
-
-    // Handle click
     const handleItemClick = (item) => {
         console.log('Clicked:', item.title);
     };
@@ -41,15 +81,13 @@ const GalleryDetails = () => {
     return (
         <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-                {/* Header */}
                 <div className="text-center mb-12">
                     <h1 className="text-4xl font-bold text-gray-900 mb-3">My Gallery</h1>
                     <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                        Explore our collection of photos and Video
+                        Explore our collection of photos and videos
                     </p>
                 </div>
 
-                {/* Images Section */}
                 <div className="mb-16">
                     <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Images</h2>
                     <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
@@ -78,23 +116,22 @@ const GalleryDetails = () => {
                     </div>
                 </div>
 
-                {/* Reels Section */}
                 <div>
                     <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Videos</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="flex flex-wrap justify-center gap-6 md:gap-10">
                         {videos.map((item) => (
                             <div
                                 key={item.id}
-                                className="relative rounded-xl overflow-hidden shadow-lg bg-white"
+                                className="relative rounded-xl overflow-hidden shadow-lg bg-white w-full sm:w-[45%] lg:w-[30%] max-w-[400px]"
                             >
-                                <video
-                                    src={item.src}
-                                    className="w-full h-64 object-cover rounded-xl"
-                                    controls
-                                    muted={false}
-                                    loop={false}
-                                    playsInline
-                                />
+                                <div className="w-full overflow-hidden h-[400px] rounded-xl">
+                                    <video
+                                        src={item.src}
+                                        className="w-full h-[400px] object-contain rounded-xl"
+                                        controls
+                                        playsInline
+                                    />
+                                </div>
                             </div>
                         ))}
                     </div>
