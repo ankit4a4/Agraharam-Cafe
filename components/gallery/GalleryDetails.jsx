@@ -1,7 +1,5 @@
 'use client'
 import React from 'react';
-
-
 import img1 from "../../public/galleryPagePhotos&video/1.jpg";
 import img2 from "../../public/galleryPagePhotos&video/2.jpg";
 import img3 from "../../public/galleryPagePhotos&video/3.jpg";
@@ -67,11 +65,12 @@ const GalleryDetails = () => {
     ];
 
     const videos = [
-        { id: 1, src: "https://res.cloudinary.com/dptqmtyot/video/upload/v1759920830/Cafe_Testimonial_4_purwui.mp4", title: "" },
-        { id: 2, src: "https://res.cloudinary.com/dptqmtyot/video/upload/v1759920828/Cafe_Testimonial_5_xamkiu.mp4", title: "" },
-        { id: 3, src: "https://res.cloudinary.com/dptqmtyot/video/upload/v1759920813/Cafe_z3hcxs.mp4", title: "" },
-        { id: 4, src: "https://res.cloudinary.com/dptqmtyot/video/upload/v1759920807/Cafe_Testimonial_3_irgkdh.mp4", title: "" },
-        { id: 6, src: "https://res.cloudinary.com/dptqmtyot/video/upload/v1759920804/Cafe_Testimonial_2_wfonnx.mp4", title: "" },
+        { id: 1, src: "https://res.cloudinary.com/dptqmtyot/video/upload/v1759925054/reel4_rw5wnp.mp4", title: "" },
+        { id: 2, src: "https://res.cloudinary.com/dptqmtyot/video/upload/v1759925014/reel5_ipvl6m.mp4", title: "" },
+        { id: 3, src: "https://res.cloudinary.com/dptqmtyot/video/upload/v1759925012/reel2_xyyjkb.mp4", title: "" },
+        { id: 4, src: "https://res.cloudinary.com/dptqmtyot/video/upload/v1759925012/reel1_sgqohh.mp4", title: "" },
+        { id: 5, src: "https://res.cloudinary.com/dptqmtyot/video/upload/v1759925022/reel3_gy1fe1.mp4", title: "" },
+
     ];
 
     const handleItemClick = (item) => {
@@ -102,7 +101,7 @@ const GalleryDetails = () => {
                                         <img
                                             src={item.src}
                                             alt={item.title}
-                                            className="w-full object-cover"
+                                            className="w-full object-contain md:object-cover"
                                         />
                                         <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-end">
                                             <div className="p-4 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
@@ -115,16 +114,36 @@ const GalleryDetails = () => {
                         ))}
                     </div>
                 </div>
-
                 <div>
                     <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Videos</h2>
-                    <div className="flex flex-wrap justify-center gap-6 md:gap-10">
-                        {videos.map((item) => (
+
+                    {/* 1st row - 3 videos */}
+                    <div className="flex flex-wrap justify-center gap-6 mb-6">
+                        {videos.slice(0, 3).map((item) => (
                             <div
                                 key={item.id}
                                 className="relative rounded-xl overflow-hidden shadow-lg bg-white w-full sm:w-[45%] lg:w-[30%] max-w-[400px]"
                             >
-                                <div className="w-full overflow-hidden h-[400px] rounded-xl">
+                                <div className="w-full overflow-hidden rounded-xl">
+                                    <video
+                                        src={item.src}
+                                        className="w-full h-[400px] object-contain rounded-xl"
+                                        controls
+                                        playsInline
+                                    />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* 2nd row - 2 videos (center aligned) */}
+                    <div className="flex flex-wrap justify-center gap-6">
+                        {videos.slice(3, 5).map((item) => (
+                            <div
+                                key={item.id}
+                                className="relative rounded-xl overflow-hidden shadow-lg bg-white w-full sm:w-[45%] lg:w-[30%] max-w-[400px]"
+                            >
+                                <div className="w-full overflow-hidden rounded-xl">
                                     <video
                                         src={item.src}
                                         className="w-full h-[400px] object-contain rounded-xl"
@@ -136,6 +155,7 @@ const GalleryDetails = () => {
                         ))}
                     </div>
                 </div>
+
             </div>
         </div>
     );
