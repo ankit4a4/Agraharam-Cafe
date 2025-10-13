@@ -1,44 +1,41 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 import { FiShoppingBag, FiHome } from "react-icons/fi";
 import { FaUtensils, FaCoffee, FaParking, FaWifi } from "react-icons/fa";
 
 const HomeServices = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: false  , mirror: true});
-  }, []);
-
   const services = [
     {
       name: "Dine-In",
       icon: FaUtensils,
-      description: "Enjoy our authentic dishes in our beautifully designed space"
+      description:
+        "Enjoy our authentic dishes in our beautifully designed space",
     },
     {
       name: "Takeaway",
       icon: FiShoppingBag,
-      description: "Take the flavors of South India home with our convenient packaging"
+      description:
+        "Take the flavors of South India home with our convenient packaging",
     },
     {
       name: "Catering",
       icon: FaCoffee,
-      description: "Make your events special with our customized catering services"
+      description:
+        "Make your events special with our customized catering services",
     },
     {
       name: "Free Parking",
       icon: FaParking,
-      description: "Ample parking space for your convenience"
+      description: "Ample parking space for your convenience",
     },
     {
       name: "Free WiFi",
       icon: FaWifi,
-      description: "Stay connected while enjoying your meal"
+      description: "Stay connected while enjoying your meal",
     },
     {
       name: "Comfortable Seating",
       icon: FiHome,
-      description: "Relax in our thoughtfully arranged seating areas"
+      description: "Relax in our thoughtfully arranged seating areas",
     },
   ];
 
@@ -57,16 +54,18 @@ const HomeServices = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Heading */}
-        <div data-aos="fade-down" className="text-center mb-8">
+        <div className="text-center mb-8">
           <p className="text-[#306c36] font-semibold uppercase tracking-widest text-sm border border-[#306c36] px-5 py-2 rounded-full bg-[#306c36]/5 shadow-sm inline-flex items-center">
             <span className="w-2 h-2 bg-[#306c36] rounded-full mr-2"></span>
             What We Offer
-          </p> <br />
+          </p>
+          <br />
           <h2 className="text-4xl md:text-5xl font-extrabold text-[#1b3c20] mt-6 mb-4 relative inline-block">
             Our <span className="text-[#2f6b35]">Services</span>
           </h2>
           <p className="text-lg text-[#555] max-w-2xl mx-auto leading-relaxed mt-6">
-            Enjoy authentic South Indian delicacies with comfort, convenience, and care.
+            Enjoy authentic South Indian delicacies with comfort, convenience,
+            and care.
           </p>
         </div>
 
@@ -77,8 +76,6 @@ const HomeServices = () => {
             return (
               <div
                 key={index}
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
                 className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-white hover:border-[#2f6b35]/30 hover:-translate-y-2 overflow-hidden"
               >
                 {/* Background pattern */}
@@ -97,7 +94,7 @@ const HomeServices = () => {
                   <h3 className="text-xl font-bold text-[#306c36] group-hover:text-[#2f6b35] transition-colors duration-300 mb-3">
                     {service.name}
                   </h3>
-                  <p className="text-[#555] text-sm leading-relaxed  group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                  <p className="text-[#555] text-sm leading-relaxed group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
                     {service.description}
                   </p>
                 </div>
@@ -109,7 +106,6 @@ const HomeServices = () => {
             );
           })}
         </div>
-
       </div>
     </section>
   );

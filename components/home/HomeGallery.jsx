@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react';
 import img1 from "../../public/galleryPagePhotos&video/28.jpg";
 import img2 from "../../public/galleryPagePhotos&video/29.jpg";
 import img3 from "../../public/galleryPagePhotos&video/30.jpg";
@@ -12,10 +10,6 @@ import img8 from "../../public/galleryPagePhotos&video/8.jpg";
 import { useRouter } from 'next/navigation';
 
 const HomeGallery = () => {
-    useEffect(() => {
-        AOS.init({ duration: 1000, once: false, mirror: true });
-    }, []);
-
     const images = [
         img1.src,
         img2.src,
@@ -27,12 +21,12 @@ const HomeGallery = () => {
         img8.src,
     ];
 
-    const router = useRouter()
+    const router = useRouter();
 
     return (
         <section className="md:py-20 py-8">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center ">
-                <div data-aos="fade-down" className="text-center mb-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+                <div className="text-center mb-16">
                     <h2 className="text-4xl font-bold text-[#2f6b35] mb-4">Our Gallery</h2>
                     <p className="text-gray-700 text-lg">A glimpse into our cafe and delicious offerings</p>
                 </div>
@@ -40,8 +34,6 @@ const HomeGallery = () => {
                     {images.map((src, index) => (
                         <div
                             key={index}
-                            data-aos="fade-up"
-                            data-aos-delay={index * 100}
                             className="rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
                         >
                             <img
@@ -54,7 +46,10 @@ const HomeGallery = () => {
                 </div>
                 <button
                     onClick={() => router.push("/gallery")}
-                    className='mt-10 text-white px-12 rounded-lg m-auto py-3 bg-[#2f6b35]'>View Gallery</button>
+                    className="mt-10 text-white px-12 rounded-lg m-auto py-3 bg-[#2f6b35]"
+                >
+                    View Gallery
+                </button>
             </div>
         </section>
     );

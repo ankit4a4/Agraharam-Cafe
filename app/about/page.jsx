@@ -4,30 +4,33 @@ import img from "../../public/homepageImages/banner3.jpg"
 import img2 from "../../public/homepageImages/aboutsectionimage.jpg";
 import { TbTargetArrow } from "react-icons/tb";
 import { ImCompass2 } from "react-icons/im";
+import img3 from "../../public/about/north-indian.jpg"
+import img4 from "../../public/about/south-indian.jpg"
 
 export default function About() {
-  const values = [
-    {
-      icon: FaLeaf,
-      title: 'Pure Vegetarian',
-      description: 'We are committed to serving only the finest vegetarian cuisine, respecting all dietary preferences and beliefs.'
-    },
-    {
-      icon: FaHeart,
-      title: 'Made with Love',
-      description: 'Every dish is prepared with passion and care, using traditional recipes passed down through generations.'
-    },
-    {
-      icon: FaUsers,
-      title: 'Community Focused',
-      description: 'We believe in bringing people together through food, creating a warm and welcoming environment for all.'
-    },
-    {
-      icon: GiLeafSwirl,
-      title: 'Fresh Ingredients',
-      description: 'We source the freshest ingredients daily to ensure every meal is nutritious and flavorful.'
-    }
-  ];
+ const values = [
+  {
+    icon: FaLeaf,
+    title: 'Pure Vegetarian',
+    description: 'We are committed to serving only the finest vegetarian cuisine, respecting all dietary preferences and beliefs.'
+  },
+  {
+    icon: FaHeart,
+    title: 'Made with Love',
+    description: 'Every dish is prepared with passion and care, using traditional recipes passed down through generations.'
+  },
+  {
+    icon: FaUsers,
+    title: 'Community Focused',
+    description: 'We believe in bringing people together through food, creating a warm and welcoming environment for all.'
+  },
+  {
+    icon: GiLeafSwirl,
+    title: 'No Artificial Colours',
+    description: 'We believe in pure, natural cooking with no artificial colours, flavours, or preservatives — only authentic taste.'
+  }
+];
+
 
   return (
     <div className="pt-16">
@@ -151,7 +154,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <img
-                src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src={img4.src}
                 alt="South Indian Delicacies"
                 className="rounded-lg shadow-lg w-full h-48 object-cover mb-4"
               />
@@ -163,7 +166,7 @@ export default function About() {
 
             <div className="text-center">
               <img
-                src="https://images.pexels.com/photos/1565982/pexels-photo-1565982.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src={img3.src}
                 alt="North Indian Curries"
                 className="rounded-lg shadow-lg w-full h-48 object-cover mb-4"
               />
@@ -179,7 +182,7 @@ export default function About() {
                 alt="Fusion Cuisine"
                 className="rounded-lg shadow-lg w-full h-48 object-cover mb-4"
               />
-              <h3 className="text-xl font-semibold text-green-800 mb-2">Fusion Innovations</h3>
+              <h3 className="text-xl font-semibold text-green-800 mb-2">Juices Innovations</h3>
               <p className="text-gray-600">
                 Creative Indo-Chinese dishes and modern interpretations of classic recipes, perfect for adventurous palates.
               </p>

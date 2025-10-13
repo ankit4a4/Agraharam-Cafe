@@ -1,16 +1,33 @@
-import React, { useEffect, useRef } from 'react';
-import { ChevronRight, Clock, Users, Heart, Award } from 'lucide-react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+"use client";
+
+import React, { useEffect, useRef } from "react";
+import { ChevronRight, Clock, Users, Heart, Award } from "lucide-react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import img from "../../public/homepageImages/aboutsectionimage.jpg";
-import { useRouter } from 'next/navigation';
+import { useRouter } from "next/navigation";
 
 const HomeAboutSection = () => {
-  const router = useRouter()
+  const router = useRouter();
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false, mirror: true });
+    // Detect Safari (Mac) or Android browsers
+    const ua = navigator.userAgent.toLowerCase();
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    const isAndroid = ua.includes("android");
+
+    // Only initialize AOS for non-Safari & non-Android browsers
+    if (!isSafari && !isAndroid) {
+      AOS.init({ duration: 800, once: true, mirror: false, easing: "ease-out" });
+    } else {
+      // Remove AOS attributes to prevent lag or stuck scroll
+      document.querySelectorAll("[data-aos]").forEach((el) => {
+        el.removeAttribute("data-aos");
+        el.style.opacity = 1;
+        el.style.transform = "none";
+      });
+    }
   }, []);
 
   return (
@@ -43,21 +60,22 @@ const HomeAboutSection = () => {
           {/* Content */}
           <div data-aos="fade-up" className="order-2 lg:order-1">
             <div className="mb-4">
-              <span
-
-                className="text-[#306c36] font-semibold tracking-wider uppercase text-sm border border-[#306c36] px-4 py-2 rounded-full bg-[#306c36]/5">
+              <span className="text-[#306c36] font-semibold tracking-wider uppercase text-sm border border-[#306c36] px-4 py-2 rounded-full bg-[#306c36]/5">
                 Our Story
               </span>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold text-[#000] mb-6 leading-tight">
-              Crafting Authentic <span className="text-[#2f6b35]">South Indian</span> Flavors Since 2018
+              Crafting Authentic{" "}
+              <span className="text-[#2f6b35]">South Indian</span> Flavors Since
+              2018
             </h2>
 
             <p className="text-[#333] text-lg leading-relaxed mb-8">
-              Welcome to Agraharam Cafe, your go-to destination for pure vegetarian delights!
-              From crispy dosas and fluffy idlis to rich paneer curries and buttery naans,
-              we bring you the best of South and North Indian flavors.
+              Welcome to Agraharam Cafe, your go-to destination for pure
+              vegetarian delights! From crispy dosas and fluffy idlis to rich
+              paneer curries and buttery naans, we bring you the best of South
+              and North Indian flavors.
             </p>
 
             {/* Features */}
@@ -107,7 +125,8 @@ const HomeAboutSection = () => {
             <div className="flex flex-row sm:flex-row gap-4">
               <button
                 onClick={() => router.push("/about")}
-                className="bg-[#306c36] hover:bg-[#245428] text-white px-8 py-4 rounded-full font-semibold text-center transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2 group">
+                className="bg-[#306c36] hover:bg-[#245428] text-white px-8 py-4 rounded-full font-semibold text-center transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2 group"
+              >
                 Our Story
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>

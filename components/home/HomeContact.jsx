@@ -54,7 +54,7 @@ const HomeContact = () => {
                                     <div className="space-y-3">
                                         <div className="flex justify-between">
                                             <span className="text-gray-700">Monday - Sunday</span>
-                                            <span className="text-[#2f6b35] pl-2 font-medium">6:00 AM - 10:00 PM</span>
+                                            <span className="text-[#2f6b35] pl-2 font-medium">6:00 AM - 10:30 PM</span>
                                         </div>
                                       
                                     </div>
