@@ -1,30 +1,35 @@
 import React from 'react';
 import {
-  GiHotMeal,
   GiChopsticks,
-  GiTacos,
   GiGlassCelebration,
-  GiIndianPalace,
  GiFrenchFries,
- GiBowlOfRice,
- 
+ GiRolledCloth,
+ GiHotMeal,
+ GiFlatBread
 
 } from 'react-icons/gi';
 import { FiCoffee } from 'react-icons/fi';
 import { FaUtensils } from 'react-icons/fa';
-import { LuUtensilsCrossed } from 'react-icons/lu';
+import { LuDonut } from "react-icons/lu";
+import { Torus } from 'lucide-react';
+
 
 const MenuHighlights = () => {
-  const menuCategories = [
-    { name: 'Idli', icon: GiBowlOfRice, description: 'Soft, fluffy steamed rice cakes' },
-    { name: 'Vada', icon: GiTacos, description: 'Crispy, golden fried delights' },
-    { name: 'Dosa', icon: GiHotMeal, description: 'Crispy crepes with various fillings' },
-    { name: 'Tea & Coffee', icon: FiCoffee, description: 'Hearty rice dishes and light meals' },
-    { name: 'Lunch & Dinner', icon: FaUtensils, description: 'North Indian breads and meals' },
-    { name: 'Chinese', icon: GiChopsticks, description: 'Indo-Chinese fusion favorites' },
-    { name: 'Snacks', icon: GiFrenchFries, description: 'Quick bites and evening treats' },
-    { name: 'Pure Juices', icon: GiGlassCelebration, description: 'Fresh juices, shakes, and more' },
-  ];
+const menuCategories = [
+  { 
+    name: 'North Indian', 
+    icon: GiHotMeal, 
+    description: 'Delicious North Indian meals with roti, sabji, and curries' 
+  },
+  { name: 'Vada', icon: LuDonut, description: 'Crispy, golden fried delights' },
+  { name: 'Dosa', icon: GiRolledCloth, description: 'Crispy South Indian crepes with various fillings' },
+  { name: 'Tea & Coffee', icon: FiCoffee, description: 'Hearty tea and coffee beverages' },
+  { name: 'Lunch & Dinner', icon: FaUtensils, description: 'Hearty meals and breads' },
+  { name: 'Chinese', icon: GiChopsticks, description: 'Indo-Chinese fusion favorites' },
+  { name: 'Snacks', icon: GiFrenchFries, description: 'Quick bites and evening treats' },
+  { name: 'Pure Juices', icon: GiGlassCelebration, description: 'Fresh juices, shakes, and more' },
+];
+
 
   return (
     <section

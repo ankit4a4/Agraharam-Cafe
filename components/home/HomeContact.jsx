@@ -1,13 +1,7 @@
-import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import React from 'react';
 import { FaMapMarkerAlt, FaClock, FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const HomeContact = () => {
-    useEffect(() => {
-        AOS.init({ duration: 1000, once: true, mirror: true });
-    }, []);
-
     return (
         <section className="md:py-16 py-8 relative overflow-hidden">
             {/* Decorative elements */}
@@ -15,7 +9,7 @@ const HomeContact = () => {
             <div className="absolute bottom-0 right-0 w-40 h-40 bg-[#2f6b35]/80 rounded-full translate-x-20 translate-y-20 opacity-50"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div data-aos="fade-down" className="text-center mb-16">
+                <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold text-[#2f6b35] mb-4 font-serif">Visit Agraharam Cafe</h2>
                     <p className="text-lg text-[#000] max-w-2xl mx-auto">Experience the authentic flavors of South India in a traditional setting</p>
                 </div>
@@ -24,7 +18,7 @@ const HomeContact = () => {
                     {/* Left Column - Contact Information */}
                     <div className="lg:col-span-1 space-y-8">
                         {/* Address Card */}
-                        <div data-aos="fade-up" data-aos-delay={100} className="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
+                        <div className="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
                             <div className="flex flex-col md:flex-row items-start space-x-4 mb-4">
                                 <div className="bg-[#b6f8bc] p-3 rounded-full">
                                     <FaMapMarkerAlt className="text-[#2f6b35] text-xl" />
@@ -41,7 +35,7 @@ const HomeContact = () => {
                         </div>
 
                         {/* Hours Card */}
-                        <div data-aos="fade-up" data-aos-delay={200} className="bg-[#d8ffdc] rounded-xl p-6 shadow-lg relative">
+                        <div className="bg-[#d8ffdc] rounded-xl p-6 relative shadow-lg">
                             <div className="absolute -top-3 right-6 bg-[#2f6b35] text-white px-4 py-1 rounded-full text-sm font-medium">
                                 TODAY'S HOURS
                             </div>
@@ -56,14 +50,13 @@ const HomeContact = () => {
                                             <span className="text-gray-700">Monday - Sunday</span>
                                             <span className="text-[#2f6b35] pl-2 font-medium">6:00 AM - 10:30 PM</span>
                                         </div>
-                                      
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Contact Card */}
-                        <div data-aos="fade-up" data-aos-delay={300} className="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
+                        <div className="bg-white rounded-xl p-6 shadow-lg transition-all duration-300 hover:shadow-xl">
                             <div className="flex flex-col md:flex-row items-start space-x-4">
                                 <div className="bg-[#b6f8bc] p-3 rounded-full">
                                     <FaPhone className="text-[#2f6b35] text-xl" />
@@ -84,13 +77,13 @@ const HomeContact = () => {
                     </div>
 
                     {/* Right Column - Map */}
-                    <div data-aos="fade-up" data-aos-delay={400} className="lg:col-span-2">
+                    <div className="lg:col-span-2">
                         <div className="bg-white rounded-xl overflow-hidden shadow-lg h-full">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.7577141922314!2d77.50344266948187!3d13.033707005760576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d005248456f%3A0x95d5a8d375ab3ddf!2sAgraharam%20Cafe!5e0!3m2!1sen!2sin!4v1758003623403!5m2!1sen!2sin"
                                 width="100%"
                                 height="100%"
-                                style={{ border: 0,  }}
+                                style={{ border: 0 }}
                                 allowFullScreen=""
                                 loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"

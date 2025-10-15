@@ -1,4 +1,4 @@
-import { GiIndianPalace, GiHotMeal, GiLeafSwirl } from 'react-icons/gi';
+import { GiIndianPalace,GiChemicalTank, GiHotMeal, GiLeafSwirl } from 'react-icons/gi';
 import { FaHeart, FaUsers, FaLeaf } from 'react-icons/fa';
 import img from "../../public/homepageImages/banner3.jpg"
 import img2 from "../../public/homepageImages/aboutsectionimage.jpg";
@@ -6,6 +6,7 @@ import { TbTargetArrow } from "react-icons/tb";
 import { ImCompass2 } from "react-icons/im";
 import img3 from "../../public/about/north-indian.jpg"
 import img4 from "../../public/about/south-indian.jpg"
+import img5 from "../../public/about/juices.jpg"
 
 export default function About() {
  const values = [
@@ -20,14 +21,14 @@ export default function About() {
     description: 'Every dish is prepared with passion and care, using traditional recipes passed down through generations.'
   },
   {
-    icon: FaUsers,
-    title: 'Community Focused',
-    description: 'We believe in bringing people together through food, creating a warm and welcoming environment for all.'
+    icon: GiChemicalTank,
+    title: 'No Artificial Colours',
+    description: 'We believe in pure, natural cooking with no artificial colours, flavours, or preservatives — only authentic taste.'
   },
   {
     icon: GiLeafSwirl,
-    title: 'No Artificial Colours',
-    description: 'We believe in pure, natural cooking with no artificial colours, flavours, or preservatives — only authentic taste.'
+    title: 'Fresh Ingredients',
+    description: 'Fresh Ingredients are sourced daily from local markets, ensuring the highest quality and flavor in every dish.'
   }
 ];
 
@@ -178,7 +179,7 @@ export default function About() {
 
             <div className="text-center">
               <img
-                src="https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=400"
+                src={img5.src}
                 alt="Fusion Cuisine"
                 className="rounded-lg shadow-lg w-full h-48 object-cover mb-4"
               />
