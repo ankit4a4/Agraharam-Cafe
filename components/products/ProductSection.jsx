@@ -34,7 +34,7 @@ export default function ProductSection() {
                   <h3 className="text-xl font-semibold text-[#2f6b35] mb-2">
                     {product.name}
                   </h3>
-                  {/* <p className="text-gray-800 font-medium">{product.price}</p> */}
+                  <p className="text-gray-800 font-medium">{product.price}</p>
                   <div className="w-0 group-hover:w-16 h-1 bg-[#2f6b35] mx-auto mt-3 transition-all duration-300"></div>
                 </div>
               </button>
